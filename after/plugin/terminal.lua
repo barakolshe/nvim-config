@@ -15,12 +15,8 @@ require("toggleterm").setup {
 
 function _G.set_terminal_keymaps()
     local opts = { buffer = 0 }
-    vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], { buffer = 0, noremap = true, nowait = true })
-    vim.keymap.set('n', '<C-h>', [[<C-w>h<CR>]], opts)
-    vim.keymap.set('n', '<C-j>', [[<C-w>j<CR>]], opts)
-    vim.keymap.set('n', '<C-k>', [[<C-w>k<CR>]], opts)
-    vim.keymap.set('n', '<C-l>', [[<C-w>l<CR>]], opts)
-    vim.keymap.set('n', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+    vim.keymap.set('t', '<C-q>', [[<C-\><C-n>]], { buffer = 0, noremap = true, nowait = true })
+    vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead

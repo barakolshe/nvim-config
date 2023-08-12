@@ -57,8 +57,8 @@ return require('packer').startup(function(use)
         -- follow latest release.
         tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
         -- install jsregexp (optional!:).
-    })
         run = "make install_jsregexp"
+    })
 
     --autocomplete working with luasnip
     use {
@@ -77,9 +77,7 @@ return require('packer').startup(function(use)
     }
 
     -- terminal
-    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
-    end }
+    use { "akinsho/toggleterm.nvim" }
 
     use {
         'numToStr/Comment.nvim',
