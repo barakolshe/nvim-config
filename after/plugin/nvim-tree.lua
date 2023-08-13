@@ -9,6 +9,7 @@ local function custom_on_attach(bufnr)
 
     vim.keymap.del('n', '<CR>', { buffer = bufnr })
     vim.keymap.del('n', '<TAB>', { buffer = bufnr })
+    vim.keymap.del('n', '<C-t>', { buffer = bufnr })
 
     vim.keymap.set('n', '<TAB>', api.node.open.edit, opts("Open"))
     vim.keymap.set('n', '<S-TAB>', api.node.open.preview, opts("Preview"))

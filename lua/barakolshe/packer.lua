@@ -79,10 +79,14 @@ return require('packer').startup(function(use)
     -- terminal
     use { "akinsho/toggleterm.nvim" }
 
+    -- Commenter
     use {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
         end
     }
+
+    -- Tab manager
+    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 end)

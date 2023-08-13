@@ -1,16 +1,11 @@
 require("toggleterm").setup {
+    size = 15,
     open_mapping = [[<c-t>]],
     hide_numbers = true,      -- hide the number column in toggleterm buffers
     direction = 'horizontal',
     auto_scroll = true,       -- automatically scroll to the bottom on terminal outpu
     insert_mappings = true,   -- whether or not the open mapping applies in insert mode
     terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
-    --winbar = {
-    --  enabled = false,
-    --  name_formatter = function(term) --  term: Terminal
-    --    return term.name
-    --  end
-    --},
 }
 
 function _G.set_terminal_keymaps()
